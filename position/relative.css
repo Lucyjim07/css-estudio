@@ -1,0 +1,10 @@
+.item-1 {
+    /* es el valor por defecto y bloquea el acceso a otras propiedades que ubican el elemento tales como top right bottom left */
+    /* position: static; */
+
+    /* el valor ´relative´ activa el acceso a las propiedades top right bottom left permitiendo mover la posición del elemento en relacion o relativamente a su mismo contenedor. 
+    Use ´relative´ cuando quiere que el elemento siga el flujo normal del documento  */
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+}

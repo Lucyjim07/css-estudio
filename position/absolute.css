@@ -1,0 +1,22 @@
+body {
+    /* elimina las barras de scroll cuando el objeto se posiciona fuera del contenedor. Crea un efecto que muestra que el elemento está parte por fuera y parte por dentro */
+    overflow: hidden;
+}
+
+.container {
+    /* Cualquier elemento dentro de este componente que contenga position ´absolute´ se ubicara en relación a este contenedor padre */
+    position: relative;
+}
+
+.item-1 {
+    /* Se usa ´absolute´ cuando se quiere remover completamente un elemento del documento y permite ubicarlo libremente usando las propiedades top right bottom left en base al siguiente padre que contenga la propiedad ´position: relative´. Si no se encuentra un padre que contenga esta propiedad, el elemento se podrá mover libremente en relacion al body del documento. 
+    Use absolute cuando quiere remover el elemento del flujo normal del documento */
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    /* bottom: 0; */
+    /* left: 0; */
+
+    /* ya que este elemento se encuentra por fuera del documento, se puede usar la propiedad ´z-indez´ para ubicarlo delante o detrás de otros elementos que se encuentren en el documento */
+    z-index: -1;
+}
