@@ -1,0 +1,131 @@
+/* 
+    Es una buena práctica usar un normalizador estandar para corregir todos los casos especiales que tienen los diferentes navegadores
+    - https://github.com/sindresorhus/modern-normalize
+    - https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+    line-height: 1.5;
+    line-height: calc(1em + 0.5rem);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/* contenedor estandar */
+.container { 
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    /* TODO: probar esta propiedad si actua diferente a margin-left y margin-right */
+    /* margin-inline: auto; */
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* TODO: probar el tamaño de las imagenes */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Media Queries Standar para mobile first design */
+/* xs */
+@media (min-width: 475px) { 
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) { 
+    .container {
+        max-width: 640px;
+    }
+}
+
+/* md */
+@media (min-width: 768px) { 
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) { 
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) { 
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) { 
+    .container {
+        max-width: 1536px;
+    }
+}
+
+
+
+/* Media Queries Standar para desktop first design */
+/* 2xl */
+@media (max-width: 1536px) { 
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) { 
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) { 
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) { 
+    .container {
+        max-width: 640px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) { 
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) { 
+    .container {
+        max-width: 100%;
+    }
+}
