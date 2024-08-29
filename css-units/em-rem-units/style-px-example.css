@@ -1,0 +1,10 @@
+/* Experimento 1. */
+/* En el navegador buscar las configuraciones del tamaño de letra */
+/* Los navegadores tienen un conjunto de propiedades preestablecidas para su apariencia, entre ellas está el tamaño de letra que por defecto suele ser de 16px, cuando las paginas web que desarrollamos no modifican este valor con alguna propiedad como la del siguiente ejemplo, el navegador puede modificar el tamaño del tipo de letra a voluntad de modificar esas configuraciones.
+
+Por el contrario si como desarrolladores, modificamos esa propiedad, estaremos obligando a que ese tamaño de letra sea siempre el mismo y cuando el navegador modifique ese tamaño de letra en sus configuraciones por motivos de accesibilidad, el tamaño de letra no va a cambiar.*/
+
+/* NOTA: Nunca usar la unidad px para aplicarlo a tamaños de letras en ningun lugar */
+ul {
+    font-size: 16px;
+}

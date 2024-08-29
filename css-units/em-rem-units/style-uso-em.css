@@ -1,0 +1,16 @@
+/* em unit: es una unidad muy útil cuando se quiere modificar el tamaño de un elemento en base al tamaño de letra que este contiene, por ejemplo en los margin, padding, widths, heights van a ser relativos al tamaño de letra de su mismo elemento */
+
+.btn {
+    background-color: tomato;
+    color: aliceblue;
+}
+
+.btn-1 {
+    font-size: 4rem;
+    padding: 0.5em 1em;
+}
+
+.btn-2 {
+    font-size: 4rem;
+    padding: 0.5rem 1rem;
+}
