@@ -1,0 +1,57 @@
+/* Existen dos formas de crear animaciones en CSS
+    - Trancition: Esperan hasta que un cambio en una propiedad ocurra y luego permite que esos cambios se ejecuten a través del tiempo. Con las transition, cualquier cambio en cualquier propiedad va a tener un efecto inmediato. Las transition se deben usar cuando las propiedades cambian de forma interactiva por ejemplo cuando el usuario hace un 'hover' sobre un elemento o hace un 'focus' sobre otro.
+    - Animation: Provee keyframes para mejorar el control de la animación, permitiendo mayor control y animaciones más complejas de forma que se ejecute un frame tras otro. Use animations cuando quiere que se ejecuten sin tener que esperar por cambios en propiedades de forma interactiva o disparada por acciones del usuario. 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    color: orangered;
+    background-color: pink;
+    border: 0.5rem solid orangered;
+    border-radius: 8px;
+
+    /* propiedades para animar la transición */
+    /* define la propieda a la cual se le debería aplicar la transición */
+    transition-property: transform;
+
+    /* define el tiempo de duración del efecto hasta que se complete */
+    transition-duration: 0.4s;
+
+    /* define la curva de acelarion para la transición, los valores comunes son (ease, ease-in, ease-in-out, ease-out, linear y otras) */
+    transition-timing-function: ease;
+    
+    /* define el tiempo de retraso antes que la transición tenga efecto */
+    transition-delay: 0s;
+
+    /* se puede usar una propiedad que condenza todas las propiedades anteriores la cual es */
+    /* transition: property duration timing-function delay; */
+    transition: transform 0.4s ease 0s,
+        background-color 0.4s ease 0s,
+        color 0.4s ease 0s;
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+    background-color: orangered;
+    color: white;
+}
