@@ -1,0 +1,123 @@
+/* Estilos para mejorar diseño de la pagina */
+:root {
+    --color-dark: #0f172a;
+    --color-light: #f1f5f9;
+    --color-container: moccasin;
+    --color-fill: gold;
+    --color-accent: darkturquoise;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    display: flex;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    border: 4px solid var(--color-dark);
+    background-color: var(--color-container);
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.item {
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--color-fill);
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    text-align: center;
+    border: 4px solid var(--color-accent);
+    border-radius: 10px;
+}
+
+
+/* Estilos para entender como funciona flexbox */
+.container {
+    /* display flex va a crear dos ejes, uno principal 'main' y uno atravesado 'cross' y los elementos dentro del contenedor se van a organizar en el eje principal y por defecto el main axes (eje principal) es horizontal */
+    display: flex;
+
+    /* Si queremos cambiar y hacer que el main axes sea vertical usamos la propiedad flex-direction con valor column para que los elementos se posicionen de forma vertical */
+    flex-direction: row;
+
+    /* Podemos alinear los elementos que existen en el contenedor a través del main axes con la siguiente propiedad.  */
+    /* justify-content alinea los elementos en el eje principal */
+    /* Los valores que puede tomar esta propiedad son: 
+        - flex-start: valor por defecto, alinea los elementos al inicio del eje
+        - flex-end: alinea los elementos al final del eje
+        - center: alinea los elementos en el centro
+        - space-between: distribuye equitativamente los elementos en el eje
+        - space-around: agrega el mismo espacio al lado de los elementos en el eje, tanto a izquierda como a derecha
+        - space-evenly: va a distribuir el espacio uniformemente entre todos los elementos */
+    /* justify-content: center; */
+
+    /* Podemos alinear los elementos que existen en el contenedor a través del cross axes o eje transversal con la siguiente propiedad. */
+    /* align-items alinea los elementos en el eje transversal */
+    /* Los valores que puede tomar esta propiedad son los mismos que justify-content */
+    /* Entendiendo baseline: si por alguna razón, alguno de los textos dentro de los elementos que se encuentran en el eje principal varía, baseline hará que la alineación de los elementos sea en base a la linea del texto de todos los elementos dentro del eje.
+    Se puede modificar de alguna forma el tamaño o la posición del texto dentro del elemento para entenderlo (.item-1 { align-content: center; })
+    */
+    /* align-items: baseline; */
+
+
+    /* --------------------------------------------------- */
+    /* Por defecto, todos los elementos dentro del contenedor van a intentar alinearse en una sola línea (agregar los elementos adicionales) y los elementos van a empezar a apretarse entre ellos. */
+    /* Para evitar esto, se puede usar la propiedad flex-wrap con valor wrap para hacer que los elementos que no alcanzan en una sola linea salten a la siguiente linea cuando no hay más espacio disponible */
+    /* flex-wrap: wrap; */
+
+    /* Cuando se agrega la propiedad 'flex-wrap: wrap;' una nueva propiedad se actíva o se desbloquea, esta propiedad nos permite alinear los elementos en el eje transversal. Los valores que puede tomar son los mismos que los de la propiedad 'justify-content' (flex-start   flex-end   center   space-between   space-around   stretch ) */
+    /* align-content: center; */
+
+    /* La propiedad gap permite agregar un espacio entre los elementos dentro del contenedor */
+    /* gap: 2rem; */
+
+    /* NOTA: Todas la propiedades que se han visto hasta ahora pertenecen al componente contenedor y permiten trabajar con los hijos o elementos internos del padre */
+}
+
+
+/* NOTA: Ahora veremos las propiedades de flex que pertenecen a los elemenots hijos, por lo que vamos a eliminar los elementos adicionales del HTML */
+
+
+/* --------------------------------------------------- */
+/* 'flex' es una propiedad resumida que indica la capacidad de un elemento flexible de alterar sus dimensiones y llenar el espacio disponible, estos elementos pueden ser estirados o contraidos dependiendo de los valores indicados. El único valor obligatorio es el de flex-grow el cual especifica el factor de crecimiento de un elemento flexible (elemento dentro de un contenedor con propiedad flex), siempre y cuando exista espacio suficiente para crecer */
+
+/* .item-3 {
+    flex: 1;
+} */
+
+/* 
+.item-1, .item-2 {
+    flex: 1;
+} */
+
+/* NOTA: los valores flex-shrink y flex-basis son conceptos avanzados */
+
+
+/* --------------------------------------------------- */
+/* 'aling-self' permite alinear al elemento que contiene esta propiedad en el eje transversal */
+
+/* .item-1 {
+    align-self: center;
+} */
+
+
+/* --------------------------------------------------- */
+/* 'order' permite cambiar el orden en el que se encuentran definidos los elementos en el HTML, no se debe usar esta propiedad ya que interfiere con la semantica del documento HTML y con la accesibilidad */
+
+/* .item-3 {
+    order: -1;
+} */
