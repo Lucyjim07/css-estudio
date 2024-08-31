@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+
+  /* existen otras formas de crear la grid */
+  /* repeat va a repetir la cantidad de veces indicada en el primer parámetro del tamaño indicado en el segundo parámetro. El segundo parámetro puede ser cualquier unidad de medida (px, %, fr) */
+  grid-template-rows: repeat(2, 100px);
+
+  /* es una buena práctica usar valores minimo y maximo para tener grids responsivas */
+  grid-template-columns: 100px minmax(100px, 3fr) 1fr;
+
+  /* agrega espaciado entre filas y columnas */
+  /* gap: 1em 3em; */
+}
+
+/* otra forma de colocar elementos en la grid es con areas nombradas, lo que permite mediante nombres ubicar elementos en la grid. El contenedor tendrá la configuración de ubicación y los elementos internos tendrán una marcación que indica qué nombre tienen */
+.container {
+  grid-template-rows: 100px 300px 100px;
+  grid-template-columns: 100px 3fr;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+.item-1 {
+  grid-area: header;
+}
+
+.item-2 {
+  grid-area: main;
+}
+
+.item-3 {
+  grid-area: aside;
+}
+
+.item-4 {
+  grid-area: footer;
+}

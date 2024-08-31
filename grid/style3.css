@@ -1,0 +1,7 @@
+/* para hacer que las grid sean responsive, se puede usar el valor auto-fit para que cuando se cumpla la condición de tamaño, el elemento se mueva a la siguiente línea */
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

@@ -1,0 +1,29 @@
+/* Estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 65%;
+  border: 12px solid black;
+}
+
+.item {
+  background-color: tomato;
+  height: auto;
+  border: 8px solid gold;
+  align-content: center;
+}
