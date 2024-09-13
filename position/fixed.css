@@ -5,16 +5,17 @@
 .item-1 {
     /* Las propiedades ´fixed´ y ´stick´ pegan el elemento en la posición indicada */
     /* ´fixed´ funciona parecido a como trabaja ´absolute´ en cuanto a que el elemento será removido del documento. Cuando se haga scroll en la pantalla se verá que el elemento está pegado en la posición en la que fue creado inicialmente. Se puede mover el elemento con las propiedades top right bottom left */
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     border-radius: 0 0 1rem 1rem;
     width: 100%;
-    z-index: -1;
+    background-color: transparent;
+    z-index: -1; */
 }
 
 .item-5 {
     /* sticky´ funciona parecido a como lo hacen ´relative´ y 'fixed´. Para que funcione se debe ubicar el elemento en una posición relativa a su contenedor con las propiedades top right bottom left para que el elemento se pegue en la posición deseada. Cuando se haga scroll y el contenedor llegue a la parte superior, el elemento permanecerá pegado en el lugar indicado, hasta que finalmente es arrastrado por su contenedor fuera de la pantalla */
     position: sticky;
-    top: 3rem;
+    top: 4rem;
 }
