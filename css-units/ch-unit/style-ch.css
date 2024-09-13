@@ -1,10 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    line-height: calc(1em + 0.5rem);
 }
 
 body {
-    background-color: snow;
+    background-color: rgb(247, 230, 230);
 }
 
 main {
@@ -23,5 +26,5 @@ main {
 
 /* la unidad de medida ch mide el ancho del caracter '0' en el tipo de letra que se está usando y es útil para medir la cantidad de caracteres que se quiere mostrar antes de que se realice un salto de línea */
 .description {
-    max-width: 100ch;
+    max-width: 80ch;
 }

@@ -4,10 +4,10 @@
 
 ul {
     /* se asigna un tamaño de letra de 1em, el navegador buscará la siguiente asignación de tamaño de letra en sus padres y aplicará la que encuentre, si no encuentra y llega hasta el elemento raiz html se colocará por defecto 16px o el valor que tenga el navegador configurado en ese momento */
-    font-size: 1em;
+    /* font-size: 1em; */
 }
 
-/* si por el contrario, le asigno a alguno de los padres el tamaño de letra en px, el elemento ul va a buscar que ahora el tamaño de letra está asignado a 32px y va a modificar su tamaño de 1em en base (relativamente) a ese nuevo tamaño (1em es el tamaño de 1 caracter) */
+/* si por el contrario, le asigno a alguno de los padres el tamaño de letra en px, el elemento ul va a encontrar que ahora el tamaño de letra está asignado a 32px y va a modificar su tamaño de 1em en base (relativamente) a ese nuevo tamaño (1em es el tamaño de 1 caracter) */
 /* tener en cuenta el problema de accesibilidad que ya se revisó al asignar directamente el tamaño de letra en px */
 .container {
     /* font-size: 32px; */
@@ -17,10 +17,11 @@ ul {
 /* con las unidades de medida em se introduce un nuevo problema que es que cada elemento va a buscar un tamaño de letra asignado ya sea en el mismo elemento o en un elemento superior y lo que va a pasar es que va a modificar el tamaño de letra por cada asignación encontrada */
 
 body {
-    /* font-size: 1.5em; */
+    font-size: 1.5em;
 }
 
-.container { 
+
+.container {
     /* font-size: 2em; */
 }
 
@@ -38,11 +39,11 @@ li {
 /* rem units: son relativas al tamaño de letra del elemento raíz, es decir al elemento html, y también está ligado al tamaño de letra establecido por el usuario en sus navegadores que por defecto suele ser de 16 px. Esta dependencia ya no se hace en forma de una cadena buscando al padre si no que busca directamente el tamaño de letra en el elemento raíz.  */
 /* NOTA: Se recomienda usar rem como unidad de medida para los tamaños de letras */
 
-/* body {
+body {
     font-size: 1.5rem;
 }
 
-.container { 
+.container {
     font-size: 2rem;
 }
 
@@ -51,5 +52,5 @@ ul {
 }
 
 li {
-    font-size: 2rem;
-} */
+    font-size: 1rem;
+}
