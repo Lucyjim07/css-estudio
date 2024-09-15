@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  width: 65%;
+  width: 90%;
   border: 12px solid black;
 }
 
@@ -25,5 +25,5 @@ body {
   background-color: tomato;
   height: auto;
   border: 8px solid gold;
-  align-content: center;
+  text-align: center;
 }
