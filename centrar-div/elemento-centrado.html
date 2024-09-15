@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centrar elementos</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            /* display: flex; */
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
         .contenedor {
             height: 200px;
             width: 300px;
             border: dashed 3px blueviolet;
-            border-radius: 1rem;
+            /* border-radius: 1rem; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
+
         .item {
             /* Propiedades para apariencia del item */
             height: 68px;
             width: 68px;
             background-color: crimson;
-            border-radius: 0.5rem;
+            /* border-radius: 0.5rem; */
 
             /* Propiedades para el texto */
             font-family: monospace;
@@ -25,38 +45,47 @@
             font-weight: bold;
 
             /* Esto centra el texto en la mitad del componente */
-            align-content: center;
-            text-align: center;
+            /* text-align: center; */
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
         }
 
         /* 1. Centrar un elemento con flex */
         .padre__flex {
             /* Esto centra los hijos en la mitad del contenedor */
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
-        .hijo__flex { 
+
+        .hijo__flex {
             /* No se necesitan reglas en el hijo */
         }
 
-        /* 2. Centrar un elemento con flex */
+        /* 2. Centrar un elemento con grid */
         .padre__grid {
             display: grid;
             place-items: center;
         }
+
         .hijo__grid {
             /* No se necesitan reglas en el hijo */
         }
     </style>
 </head>
+
 <body>
-    <div class="contenedor padre__flex">
-        <div class="item hijo__flex">1</div>
+    <div class="contenedor">
+        <div class="item">
+            1
+        </div>
     </div>
 
-    <div class="contenedor padre__grid">
-        <div class="item hijo__grid">2</div>
-    </div>
+    <!-- <div class="contenedor padre__grid">
+        <div class="item">2</div>
+    </div> -->
 </body>
+
 </html>
